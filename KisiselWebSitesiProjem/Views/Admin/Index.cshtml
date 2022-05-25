@@ -1,0 +1,25 @@
+﻿@using KisiselWebSitesiProjem.Models.Siniflar
+@model List<Anasayfa>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Ana Sayfa</h2>
+
+<table class="table table-bordered mt-3">
+    <tr>
+        <th>Id</th>
+        <th>İsim</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.İd</td>
+            <td>@x.isim</td>
+            <td><a href="AnaSayfaGetir.html" class="btn btn-primary">Güncelle</a></td>
+        </tr>
+    }
+
+</table>
